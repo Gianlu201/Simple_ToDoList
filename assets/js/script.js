@@ -4,6 +4,7 @@ const btnSubmit = document.getElementById('btnSubmit');
 const listArea = document.getElementById('listArea');
 const listTask = document.getElementById('listTask');
 const noTask = document.getElementById('noTask');
+const taskCounter = document.getElementById('taskCounter');
 const myTaskList = [];
 const myStates = [];
 
@@ -24,8 +25,10 @@ btnSubmit.addEventListener('click', function (e) {
 function printTasks() {
   if (myTaskList.length === 0) {
     noTask.setAttribute('class', '');
+    taskCounter.setAttribute('class', 'hidden');
   } else if (myTaskList.length > 0) {
     noTask.setAttribute('class', 'hidden');
+    taskCounter.setAttribute('class', '');
   }
 
   listTask.innerHTML = '';
@@ -53,6 +56,8 @@ function createLi(str, index) {
   myLi.setAttribute('class', `${myStates[index]}`);
 
   listTask.appendChild(myLi);
+
+  checkProgress();
 }
 
 function deleteTask(index) {
@@ -67,14 +72,20 @@ function deleteTask(index) {
 function setState(index) {
   const myLi = document.querySelector(`#listTask li:nth-child(${index + 1})`);
 
-  console.log(myLi);
   if (myLi.classList.contains('unDone')) {
     myLi.classList.remove('unDone');
     myLi.classList.add('done');
     myStates[index] = 'done';
+    printTasks();
   } else if (myLi.classList.contains('done')) {
     myLi.classList.remove('done');
     myLi.classList.add('unDone');
     myStates[index] = 'unDone';
+    printTasks();
   }
+}
+
+function checkProgress() {
+  const myStatus = myStates.filter((element) => element === 'done');
+  taskCounter.innerText = `Progressi: ${myStatus.length}/${myStates.length}`;
 }

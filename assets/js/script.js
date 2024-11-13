@@ -87,5 +87,9 @@ function setState(index) {
 
 function checkProgress() {
   const myStatus = myStates.filter((element) => element === 'done');
-  taskCounter.innerText = `Progressi: ${myStatus.length}/${myStates.length}`;
+  if (myStatus.length === myStates.length) {
+    taskCounter.innerText = `Hai completato tutte le tasks!`;
+  } else {
+    taskCounter.innerText = `Progressi: ${myStatus.length}/${myStates.length}`;
+  }
 }

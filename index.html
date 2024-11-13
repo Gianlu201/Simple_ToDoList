@@ -3,12 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
+    <title>Task List</title>
     <link rel="icon" type="image/png" href="assets/img/icon.png" />
+
+    <!-- Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <main>
+      <section id="sectInput">
+        <form id="frmInput">
+          <input type="text" id="taskInput" name="taskInput" />
+          <button type="submit" id="btnSubmit">Inserisci</button>
+        </form>
+      </section>
+
+      <section id="listArea">
+        <ul id="listTask">
+          <!-- <li class="notDone" onclick="setState(index)">
+            <span>Prima task</span
+            ><button onclick='deleteTask(index)'><i class="bx bxs-trash-alt"></i></button>
+          </li> -->
+        </ul>
+        <h3 id="noTask">Non hai task che ti aspettano</h3>
+      </section>
+    </main>
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>

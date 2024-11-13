@@ -1,0 +1,80 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: blueviolet;
+}
+
+main {
+  width: 50%;
+  margin: 200px auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#taskInput {
+  font-size: 1.1em;
+  padding: 0.5em;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  width: 70%;
+  margin-right: 5%;
+}
+
+#btnSubmit {
+  width: calc(25% - 25px);
+  padding: 0.5em 2.5em;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: cyan;
+  border: none;
+  border-radius: 10px;
+}
+
+#listArea {
+  margin: 2em 0 0.5em;
+}
+
+#listArea ul {
+  padding: 0;
+}
+
+#listArea ul li {
+  list-style-type: none;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  background-color: #c4beeb;
+  margin-top: 0.5em;
+}
+
+#listArea li span {
+  display: inline-block;
+  width: 96%;
+}
+
+#listArea li button {
+  width: 4%;
+  padding: 6px 4px 4px;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+#listArea li.notDone span {
+  text-decoration: none;
+}
+
+#listArea li.done span {
+  text-decoration: line-through;
+  color: darkgray;
+}
+
+.hidden {
+  display: none;
+}

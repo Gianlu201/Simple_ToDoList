@@ -18,7 +18,7 @@ Permette di aggiungere, completare, riattivare e rimuovere task con un’interfa
 
 ## 🖼️ Anteprima
 
-![ToDoList](screenshots/screenshotToDoList.jpg)
+![ToDoList](screenshot/screenshotToDoList.jpg)
 
 ---
 

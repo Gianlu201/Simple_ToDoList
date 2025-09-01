@@ -34,11 +34,11 @@ Permette di aggiungere, completare, riattivare e rimuovere task con un’interfa
 
 1. Clona la repository:
    ```bash
-   git clone https://github.com/tuo-username/todo-list-app.git
+   git clone https://github.com/Gianlu201/Simple_ToDoList.git
    ```
 2. Entra nella cartella del progetto:
    ```bash
-   cd todo-list-app
+   cd Simple_ToDoList
    ```
 3. Apri il file `index.html` nel browser.  
 
